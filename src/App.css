@@ -169,12 +169,19 @@ textarea::placeholder {
 
 .main {
   height: 76vh;
+  position: relative;
 
   .intro {
-    height: 100vh;
+    height: 90%;
+    width: 100%;
+    position: relative;
   }
+
   .mask,
   .text {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,18 +195,23 @@ textarea::placeholder {
     p {
       width: 1000px;
       padding: 40px;
-    }
-    span {
-      color: #ec4e39;
+      margin: 0;
+
+      span {
+        color: #ec4e39;
+      }
     }
   }
 
   .mask {
     mask-image: url("../public/mask.svg");
     mask-repeat: no-repeat;
-    mask-size: 40px;
     background: #ec4e39;
-    position: absolute;
     color: black;
+    z-index: 2;
+  }
+
+  .text {
+    z-index: 1;
   }
 }

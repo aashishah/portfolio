@@ -5,7 +5,7 @@ export default function Main() {
   return (
     <div className="main">
       <Intro></Intro>
-      {/* <div style={{ margin: "0 -20px" }}>
+      <div style={{ margin: "0 -20px" }}>
         <Ticker
           items={[
             "CREATIVE DEVELOPMENT",
@@ -15,7 +15,7 @@ export default function Main() {
             "PYTHON",
           ]}
         />
-      </div> */}
+      </div>
     </div>
   );
 }
