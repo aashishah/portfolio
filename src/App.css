@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #feefc7;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.33%);
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotateCorner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes slideRight {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.portfolio-root {
+  min-height: 100vh;
+  background: #eae0b1;
+  color: #100e0e;
+  font-family: "DM Sans", sans-serif;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+input,
+textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333;
+  color: #ccc;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  padding: 4px 2px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+input:focus,
+textarea:focus {
+  border-bottom-color: #b8f5a0;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #444;
+}
+
+.send-btn {
+  background: #b8f5a0;
+  color: #0d0d0d;
+  border: none;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  padding: 7px 0;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 14px;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+}
+.send-btn:hover {
+  background: #d4fabd;
+  transform: translateY(-1px);
+}
+.send-btn:active {
+  transform: translateY(0);
+}
+
+.nav-link {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    padding-left 0.2s;
+  padding: 2px 0;
+  display: block;
+}
+.nav-link:hover {
+  color: #e0e0e0;
+  padding-left: 4px;
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+.corner-spin {
+  animation: rotateCorner 8s linear infinite;
+  display: inline-block;
+}
