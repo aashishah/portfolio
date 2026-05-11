@@ -16,16 +16,24 @@ export default function Footer() {
     >
       <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
         {[
-          { label: "GH", title: "GitHub" },
-          { label: "LI", title: "LinkedIn" },
+          {
+            label: "GH",
+            title: "GitHub",
+            link: "https://github.com/aashishah",
+          },
+          {
+            label: "LI",
+            title: "LinkedIn",
+            link: "https://www.linkedin.com/in/aashi-shah",
+          },
           { label: "TW", title: "Twitter" },
         ].map((s) => (
-          <div
+          <a
             key={s.label}
             title={s.title}
             style={{
               width: "30px",
-              height: "30px",
+              height: "20px",
               border: "1px solid #949494",
               display: "flex",
               alignItems: "center",
@@ -44,9 +52,10 @@ export default function Footer() {
               e.currentTarget.style.borderColor = "#949494";
               e.currentTarget.style.color = "#c7c7c7";
             }}
+            href={s.link}
           >
             {s.label}
-          </div>
+          </a>
         ))}
       </div>
 

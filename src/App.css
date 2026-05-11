@@ -167,8 +167,12 @@ textarea::placeholder {
   display: inline-block;
 }
 
+a {
+  text-decoration: none;
+}
+
 .main {
-  height: 76vh;
+  height: 80vh;
   position: relative;
 
   .intro {

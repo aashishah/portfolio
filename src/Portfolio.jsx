@@ -205,7 +205,7 @@ export default function Portfolio() {
     <>
       <div className="noise-overlay" />
 
-      <div className="portfolio-root" style={{ padding: "0 20px 40px" }}>
+      <div className="portfolio-root" style={{ padding: "0 20px" }}>
         <Header />
         <Main />
 
