@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import Ticker from "./components/Ticker";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Main from "./components/Main";
 
 const projects = [
   {
@@ -182,7 +185,7 @@ function ProjectCard({ project, index }) {
   );
 }
 
-export default function CreativeDevPortfolio() {
+export default function Portfolio() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -191,17 +194,6 @@ export default function CreativeDevPortfolio() {
     subject: "",
   });
   const [sent, setSent] = useState(false);
-  const [time, setTime] = useState("");
-
-  useEffect(() => {
-    const tick = () => {
-      const d = new Date();
-      setTime(d.toTimeString().slice(0, 8));
-    };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
 
   const handleSend = (e) => {
     e.preventDefault && e.preventDefault();
@@ -214,167 +206,10 @@ export default function CreativeDevPortfolio() {
       <div className="noise-overlay" />
 
       <div className="portfolio-root" style={{ padding: "0 20px 40px" }}>
-        {/* ── HEADER ── */}
-        <header
-          style={{
-            display: "flex",
-            alignItems: "flex-end",
-            justifyContent: "space-between",
-            padding: "28px 0 12px",
-            borderBottom: "2px solid #222",
-            animation: "fadeUp 0.5s ease both",
-          }}
-        >
-          <h1
-            style={{
-              fontFamily: "'Bebas Neue', sans-serif",
-              fontSize: "clamp(36px, 6vw, 64px)",
-              letterSpacing: "0.04em",
-              color: "#0c0b0b",
-              lineHeight: 1,
-            }}
-          >
-            CREATIVE_DEV_0x <span style={{ color: "#2a720d" }}>///</span>
-          </h1>
-          <div style={{ textAlign: "right" }}>
-            <div
-              style={{
-                fontFamily: "'IBM Plex Mono', monospace",
-                fontSize: "11px",
-                letterSpacing: "0.15em",
-                color: "#555",
-                border: "1px solid #333",
-                padding: "5px 14px",
-                display: "inline-block",
-              }}
-            >
-              MAY 2026
-            </div>
-            <div
-              style={{
-                fontFamily: "'IBM Plex Mono', monospace",
-                fontSize: "10px",
-                color: "#444",
-                marginTop: "6px",
-                letterSpacing: "0.1em",
-              }}
-            >
-              {time}{" "}
-              <span
-                style={{
-                  animation: "blink 1s step-start infinite",
-                  color: "#b8f5a0",
-                }}
-              >
-                ▋
-              </span>
-            </div>
-          </div>
-        </header>
+        <Header />
+        <Main />
 
-        {/* ── TICKER ── */}
-        <div style={{ margin: "0 -20px" }}>
-          <Ticker
-            items={[
-              "Audio-Reactive Particles",
-              "Generative Grid Systems",
-              "Pixel Sorting Filter",
-              "WebGL Shaders",
-              "React Ecosystems",
-              "Creative Coding",
-            ]}
-          />
-        </div>
-
-        {/* ── MAIN GRID ── */}
-
-        {/* ── FOOTER ── */}
-        <footer
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            padding: "18px 0 0",
-            borderTop: "1px solid #1a1a1a",
-            marginTop: "1px",
-            animation: "fadeUp 0.5s ease 0.5s both",
-          }}
-        >
-          <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
-            {[
-              { label: "GH", title: "GitHub" },
-              { label: "LI", title: "LinkedIn" },
-              { label: "TW", title: "Twitter" },
-            ].map((s) => (
-              <div
-                key={s.label}
-                title={s.title}
-                style={{
-                  width: "30px",
-                  height: "30px",
-                  border: "1px solid #2a2a2a",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontFamily: "'IBM Plex Mono', monospace",
-                  fontSize: "9px",
-                  color: "#555",
-                  cursor: "pointer",
-                  transition: "border-color 0.2s, color 0.2s",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "#b8f5a0";
-                  e.currentTarget.style.color = "#b8f5a0";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "#2a2a2a";
-                  e.currentTarget.style.color = "#555";
-                }}
-              >
-                {s.label}
-              </div>
-            ))}
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-            }}
-          >
-            <div
-              style={{
-                fontSize: "18px",
-                color: "#145260",
-                animation: "float 3s ease-in-out infinite",
-              }}
-            >
-              ✦
-            </div>
-            <span
-              style={{
-                fontFamily: "'IBM Plex Mono', monospace",
-                fontSize: "9px",
-                letterSpacing: "0.18em",
-                color: "#444",
-              }}
-            >
-              CODE
-            </span>
-          </div>
-
-          <div
-            style={{
-              fontFamily: "'IBM Plex Mono', monospace",
-              fontSize: "9px",
-              letterSpacing: "0.18em",
-              color: "#333",
-            }}
-          >
-            ALL CODE IS POETRY ✦
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );

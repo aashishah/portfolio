@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #feefc7;
+  background: #010101;
 }
 
 @keyframes ticker {
@@ -75,8 +75,8 @@ body {
 
 .portfolio-root {
   min-height: 100vh;
-  background: #eae0b1;
-  color: #100e0e;
+  background: #010101;
+  color: #ffffff;
   font-family: "DM Sans", sans-serif;
   animation: fadeIn 0.4s ease;
 }
@@ -159,11 +159,47 @@ textarea::placeholder {
   pointer-events: none;
   z-index: 9999;
   opacity: 0.025;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 200px;
 }
 
 .corner-spin {
   animation: rotateCorner 8s linear infinite;
   display: inline-block;
+}
+
+.main {
+  height: 76vh;
+
+  .intro {
+    height: 100vh;
+  }
+  .mask,
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #afa18f;
+    font-size: 42px;
+    line-height: 66px;
+    cursor: default;
+    height: 100%;
+    width: 100%;
+
+    p {
+      width: 1000px;
+      padding: 40px;
+    }
+    span {
+      color: #ec4e39;
+    }
+  }
+
+  .mask {
+    mask-image: url("../public/mask.svg");
+    mask-repeat: no-repeat;
+    mask-size: 40px;
+    background: #ec4e39;
+    position: absolute;
+    color: black;
+  }
 }

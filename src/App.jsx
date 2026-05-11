@@ -1,10 +1,10 @@
 import "./App.css";
-import CreativeDevPortfolio from "./CreativeDevPortfolio";
+import Portfolio from "./Portfolio";
 
 function App() {
   return (
     <>
-      <CreativeDevPortfolio />
+      <Portfolio />
     </>
   );
 }

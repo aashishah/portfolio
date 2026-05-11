@@ -4,8 +4,8 @@ export default function Ticker({ items }) {
       style={{
         overflow: "hidden",
         whiteSpace: "nowrap",
-        borderTop: "1px solid #222",
-        borderBottom: "1px solid #222",
+        borderTop: "1px solid #949494",
+        borderBottom: "1px solid #949494",
         padding: "6px 0",
       }}
     >
@@ -15,7 +15,7 @@ export default function Ticker({ items }) {
           animation: "ticker 18s linear infinite",
           fontSize: "11px",
           letterSpacing: "0.18em",
-          color: "#0f0e0e",
+          color: "#c7c7c7",
           fontFamily: "'IBM Plex Mono', monospace",
         }}
       >
