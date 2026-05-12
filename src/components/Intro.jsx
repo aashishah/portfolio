@@ -9,33 +9,39 @@ export default function Intro() {
 
   return (
     <div className="intro">
-      <motion.div
-        className="mask"
-        animate={{
-          WebkitMaskPosition: `${x - size / 1.35}px ${y - size / 1.35}px`,
-          WebkitMaskSize: `${size}px`,
-        }}
-        transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
-      >
-        <p
-          onMouseEnter={() => {
-            setIsHovered(true);
+      <div>
+        <motion.div
+          className="mask"
+          animate={{
+            WebkitMaskPosition: `${x - size / 1.35}px ${y - size / 1.35}px`,
+            WebkitMaskSize: `${size}px`,
           }}
-          onMouseLeave={() => {
-            setIsHovered(false);
-          }}
+          transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
         >
-          A creative tinkerer who likes creating cool stuff like this website
-          you're interacting with!
-        </p>
-      </motion.div>
+          <p
+            onMouseEnter={() => {
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false);
+            }}
+          >
+            A digital artisan, who likes breaking things apart to build them
+            back better—currently tinkering with the interface you’re exploring.
+          </p>
+        </motion.div>
 
-      <div className="text">
-        <p>
-          A <span>creative developer</span> producing high quality & impactful
-          digital experiences.
-        </p>
+        <div className="text">
+          <p>
+            A <span>creative developer</span> merging technical rigor with
+            radical design to ship products that feel alive.
+          </p>
+        </div>
       </div>
+      <div className="pic">
+        <img src="../../public/aashi.jpg"></img>
+      </div>{" "}
+      *
     </div>
   );
 }
