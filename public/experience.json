@@ -1,0 +1,22 @@
+[
+  {
+    "id": "101",
+    "company": "Deloitte Consulting",
+    "position": "FullStack Developer (Consultant)",
+    "duration": "Aug 2024 - Present",
+    "description": "Working on various software development projects, utilizing technologies such as .NET, React, Angular to deliver innovative solutions for clients across different industries."
+  },
+  {
+    "id": "102",
+    "company": "UWorld",
+    "position": "Software Engineer",
+    "duration": "Nov 2021 - Aug 2024",
+    "description": "Contributed to the development of a web application using Angular and .NET, collaborating with a team of developers to implement new features and optimize performance."
+  },
+  {
+    "id": "103",
+    "position": "Freelance Graphic Designer",
+    "duration": "Present",
+    "description": "Designed and created visual assets for various clients, including book covers, album cover design, marketing materials, and web graphics."
+  }
+]

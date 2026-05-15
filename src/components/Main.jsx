@@ -1,10 +1,12 @@
+import Experience from "./Experience";
 import Intro from "./Intro";
 import Ticker from "./Ticker";
 
 export default function Main() {
   return (
     <div className="main">
-      <Intro></Intro>
+      {/* <Intro></Intro> */}
+      <Experience />
       <div style={{ margin: "0 -20px" }}>
         <Ticker
           items={[
