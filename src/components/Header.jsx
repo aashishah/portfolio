@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
+import Nav from "./Nav";
 
 export default function Header() {
-  const d = new Date();
-  const month = d.toLocaleString("default", { month: "short" }).toUpperCase();
-
   const [time, setTime] = useState("");
 
   useEffect(() => {
@@ -19,6 +17,8 @@ export default function Header() {
   return (
     <header
       style={{
+        position: "relative",
+        zIndex: 10000,
         display: "flex",
         alignItems: "flex-end",
         justifyContent: "space-between",
@@ -40,19 +40,7 @@ export default function Header() {
       </h1>
 
       <div style={{ textAlign: "right" }}>
-        <div
-          style={{
-            fontFamily: "'IBM Plex Mono', monospace",
-            fontSize: "11px",
-            letterSpacing: "0.15em",
-            color: "#c7c7c7",
-            border: "1px solid #949494",
-            padding: "5px 14px",
-            display: "inline-block",
-          }}
-        >
-          {month} 2026
-        </div>
+        <Nav />
         <div
           style={{
             fontFamily: "'IBM Plex Mono', monospace",

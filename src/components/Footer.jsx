@@ -26,7 +26,6 @@ export default function Footer() {
             title: "LinkedIn",
             link: "https://www.linkedin.com/in/aashi-shah",
           },
-          { label: "TW", title: "Twitter" },
         ].map((s) => (
           <a
             key={s.label}
