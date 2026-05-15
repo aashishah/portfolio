@@ -10,34 +10,11 @@ function SectionContent({ activeSection }) {
     case "Experience":
       return <Experience />;
     case "Projects":
-      return (
-        <div className="projects">
-          <h1>Projects</h1>
-          <p>
-            Here are the projects I’m working on, with current design and code
-            work.
-          </p>
-        </div>
-      );
+      return <div className="projects">THIS IS A WIP!</div>;
     case "Contact":
-      return (
-        <div className="contact">
-          <h1>Contact</h1>
-          <p>
-            Get in touch to collaborate, build, or explore new ideas together.
-          </p>
-        </div>
-      );
+      return <div className="contact">THIS IS A WIP!</div>;
     case "What I'm doing currently":
-      return (
-        <div className="current-work">
-          <h1>Current Focus</h1>
-          <p>
-            Experimenting with dynamic interfaces, motion, and reactive design
-            systems.
-          </p>
-        </div>
-      );
+      return <div className="current-work">THIS IS A WIP!</div>;
     default:
       return <Intro />;
   }
