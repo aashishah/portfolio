@@ -38,6 +38,7 @@ export default function Header() {
       >
         AASHI SHAH <span style={{ color: "#ce3330" }}>///</span>
       </h1>
+
       <div style={{ textAlign: "right" }}>
         <div
           style={{

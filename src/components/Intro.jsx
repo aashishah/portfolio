@@ -39,7 +39,7 @@ export default function Intro() {
         </div>
       </div>
       <div className="pic">
-        <img src="../../public/aashi.jpg"></img>
+        <img src="aashi.jpg"></img>
       </div>{" "}
       *
     </div>
