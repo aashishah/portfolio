@@ -45,7 +45,7 @@ const panelVariants = {
   },
 };
 
-function NavRow({ item }) {
+function NavRow({ item, onSelect }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -53,6 +53,7 @@ function NavRow({ item }) {
       variants={rowVariants}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
+      onClick={onSelect}
       style={{
         listStyle: "none",
         cursor: "pointer",
@@ -133,7 +134,7 @@ function NavRow({ item }) {
   );
 }
 
-export default function Nav() {
+export default function Nav({ onSelect, activeSection }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -232,7 +233,14 @@ export default function Nav() {
                 style={{ margin: 0, padding: 0 }}
               >
                 {NAV_ITEMS.map((item) => (
-                  <NavRow key={item.label} item={item} />
+                  <NavRow
+                    key={item.label}
+                    item={item}
+                    onSelect={() => {
+                      setOpen(false);
+                      onSelect?.(item.label);
+                    }}
+                  />
                 ))}
               </motion.ul>
 

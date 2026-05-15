@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Ticker from "./components/Ticker";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -194,6 +194,7 @@ export default function Portfolio() {
     subject: "",
   });
   const [sent, setSent] = useState(false);
+  const [activeSection, setActiveSection] = useState("Home");
 
   const handleSend = (e) => {
     e.preventDefault && e.preventDefault();
@@ -206,8 +207,11 @@ export default function Portfolio() {
       <div className="noise-overlay" />
 
       <div className="portfolio-root" style={{ padding: "0 20px" }}>
-        <Header />
-        <Main />
+        <Header
+          activeSection={activeSection}
+          onSelectSection={setActiveSection}
+        />
+        <Main activeSection={activeSection} />
 
         <Footer />
       </div>

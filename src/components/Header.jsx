@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Nav from "./Nav";
 
-export default function Header() {
+export default function Header({ activeSection, onSelectSection }) {
   const [time, setTime] = useState("");
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function Header() {
       </h1>
 
       <div style={{ textAlign: "right" }}>
-        <Nav />
+        <Nav onSelect={onSelectSection} activeSection={activeSection} />
         <div
           style={{
             fontFamily: "'IBM Plex Mono', monospace",
