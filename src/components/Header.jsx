@@ -27,7 +27,7 @@ export default function Header({ activeSection, onSelectSection }) {
         animation: "fadeUp 0.5s ease both",
       }}
     >
-      <h1
+      <h2
         style={{
           fontFamily: "'Bebas Neue', sans-serif",
           fontSize: "clamp(24px, 6vw, 42px)",
@@ -37,7 +37,7 @@ export default function Header({ activeSection, onSelectSection }) {
         }}
       >
         AASHI SHAH <span style={{ color: "#ce3330" }}>///</span>
-      </h1>
+      </h2>
 
       <div style={{ textAlign: "right" }}>
         <Nav onSelect={onSelectSection} activeSection={activeSection} />

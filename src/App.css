@@ -180,7 +180,7 @@ a {
 }
 
 .main {
-  height: 80vh;
+  height: 84vh;
   position: relative;
 
   .intro {
@@ -249,7 +249,7 @@ a {
 }
 
 /* ── Heading ── */
-.experience h1 {
+h1 {
   font-family: var(--mono);
   font-size: clamp(1.5rem, 5vw, 2.5rem);
   font-weight: 500;
@@ -263,7 +263,7 @@ a {
   display: inline-block;
 }
 
-.experience h1::after {
+h1::after {
   content: "";
   position: absolute;
   bottom: -4px;
@@ -382,6 +382,15 @@ a {
 
 .experience-item:hover p:last-of-type {
   color: rgba(232, 228, 222, 0.6);
+}
+
+.subtext {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(232, 228, 222, 0.35);
+  margin: 18px 0 0;
 }
 
 /* ── Keyframes ── */
