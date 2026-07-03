@@ -7,7 +7,7 @@ export default function Main({ activeSection }) {
   return (
     <div className="main">
       <SectionContent activeSection={activeSection} />
-      <div style={{ margin: "0 -20px" }}>
+      <div style={{ margin: "0 -20px", bottom: "20px" }}>
         <Ticker
           items={[
             "CREATIVE DEVELOPMENT",

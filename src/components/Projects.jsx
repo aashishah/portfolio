@@ -16,47 +16,29 @@ const projects = [
   },
   {
     id: "02",
-    title: "Deloitte Dashboard",
-    tags: [".NET", "Angular", "SQL"],
+    title: "WorldWise",
+    tags: ["React", "SQL"],
     year: "2025",
     description:
-      "Internal analytics dashboard for client reporting — data visualization across multi-industry verticals.",
+      "An app to track all the places you've visited in the world, completed with map-tracking and notes and dates!",
     link: "#",
   },
   {
     id: "03",
-    title: "UWorld LMS",
-    tags: ["Angular", ".NET", "Azure"],
-    year: "2024",
+    title: "Janus",
+    tags: ["Node.js", "Javascript", "Cockroach DB", "Courier"],
+    year: "2021",
     description:
-      "Feature development and performance optimization for a large-scale learning management platform.",
+      "A Chrome Extension, that tracks your applications for you, at the click of a button. It also sends you periodic mails to remind you to follow up on previously applied jobs.",
     link: "#",
   },
   {
     id: "04",
-    title: "Album Cover Gen",
-    tags: ["Python", "Stable Diffusion", "Design"],
-    year: "2024",
-    description:
-      "Generative pipeline for client album artwork — prompt engineering meets visual identity design.",
-    link: "#",
-  },
-  {
-    id: "05",
-    title: "Book Cover Studio",
+    title: "Book Covers",
     tags: ["Figma", "Illustrator", "Design"],
     year: "2023",
     description:
       "Freelance series of book cover designs spanning fiction, non-fiction, and academic publications.",
-    link: "#",
-  },
-  {
-    id: "06",
-    title: "Marketing Toolkit",
-    tags: ["React", "Design", "Branding"],
-    year: "2023",
-    description:
-      "Reusable web-component library and asset system for a recurring brand campaign client.",
     link: "#",
   },
 ];
@@ -287,17 +269,7 @@ export default function Projects() {
       </div>
 
       {/* grid */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-          gap: "1px",
-          background: "rgba(255,255,255,0.06)",
-          border: "1px solid rgba(255,255,255,0.06)",
-          maxWidth: "1100px",
-          marginBottom: "2em",
-        }}
-      >
+      <div className="projects-grid">
         {projects.map((project, i) => (
           <ProjectCard key={project.id} project={project} index={i} />
         ))}

@@ -393,6 +393,39 @@ h1::after {
   margin: 18px 0 0;
 }
 
+.projects-grid {
+  display: grid;
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  max-width: 1100px;
+  margin-bottom: 2em;
+
+  /* mobile: 1 col */
+  grid-template-columns: 1fr;
+}
+
+/* ≥ 480px: 2 cols */
+@media (min-width: 480px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ≥ 768px: 3 cols */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ≥ 1100px: 4 cols */
+@media (min-width: 1100px) {
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* ── Keyframes ── */
 @keyframes fadeUp {
   to {
