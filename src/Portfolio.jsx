@@ -7,21 +7,21 @@ import Main from "./components/Main";
 const projects = [
   {
     id: "alpha",
-    title: "PROJECT ALPHA",
-    sub: "INTERACTION DESIGN",
+    title: "THE ARTFUL ODYSSEY",
+    sub: "ONLINE STORE",
     img: null,
     color: "#c8f0a0",
-    desc: "Mobile-first interaction design system with modular component architecture.",
-    tag: "UX / UI",
+    desc: "Designed and independently built a full-stack online store for my art business, end-to-end — frontend, backend and database — using React, Serverless API and Supabase, currently serving 400+ site visitors",
+    tag: "React, Supabase",
   },
   {
     id: "realms",
-    title: "SYNTHETIC_REALMS",
+    title: "PORTFOLIO",
     sub: "GENERATIVE ART",
     img: null,
     color: "#a0c8f0",
-    desc: "Real-time generative art driven by noise fields and recursive geometry.",
-    tag: "WebGL",
+    desc: "You are currently previewing this project.",
+    tag: "React",
   },
   {
     id: "pixel",
